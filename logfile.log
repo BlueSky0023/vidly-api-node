@@ -749,3 +749,5 @@
 {"level":"info","message":"Listening on port 5000..."}
 {"level":"info","message":"Listening on port 5000..."}
 {"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly_tests..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly..."}

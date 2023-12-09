@@ -1,15 +1,3 @@
 {
-  "routes": [
-    { "src": "/api/(.*)", "dest": "/api/$1" },
-    { "src": "/config/(.*)", "dest": "/config/$1" },
-    { "src": "/middleware/(.*)", "dest": "/middleware/$1" },
-    { "src": "/models/(.*)", "dest": "/models/$1" },
-    { "src": "/routes/(.*)", "dest": "/routes/$1" },
-    { "src": "/startup/(.*)", "dest": "/startup/$1" },
-    { "src": "/tests/(.*)", "dest": "/tests/$1" },
-    { "src": "/index.js", "dest": "/index.js" },
-    { "src": "/package.json", "dest": "/package.json" },
-    { "src": "/package-lock.json", "dest": "/package-lock.json" },
-    { "src": "/(.*)", "dest": "/$1" }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }

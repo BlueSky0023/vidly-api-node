@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for vidly/startup/db.js</title>
+    <title>Code coverage report for vidly/routes/login.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">vidly/startup</a> db.js</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">vidly/routes</a> login.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">87.5% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>7/8</span>
+                <span class='fraction'>5/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">66.66% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/3</span>
+                <span class='fraction'>0/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">87.5% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>7/8</span>
+                <span class='fraction'>5/10</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -74,36 +74,36 @@
 <a name='L9'></a><a href='#L9'>9</a>
 <a name='L10'></a><a href='#L10'>10</a>
 <a name='L11'></a><a href='#L11'>11</a>
-<a name='L12'></a><a href='#L12'>12</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const winston = require('winston');
-const mongoose = require('mongoose');
-const config = require('config');
-&nbsp;
-module.exports = function () {
-  const db = config.get('db');
-  mongoose
-    .connect(db, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify:false })
-    .then(() =&gt; winston.info(`Connected to ${db}...`))
-    .catch(<span class="fstat-no" title="function not covered" >(e</span>rr) =&gt; <span class="cstat-no" title="statement not covered" >console.error('Could not connect to MongoDB:', err))</span>;
-};
-&nbsp;</pre></td></tr></table></pre>
+<a name='L12'></a><a href='#L12'>12</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">0</span>
+<span class="cline-any cline-no">0</span>
+<span class="cline-any cline-no">0</span>
+<span class="cline-any cline-no">0</span>
+<span class="cline-any cline-no">0</span>
+<span class="cline-any cline-no">0</span>
+<span class="cline-any cline-no">0</span>
+<span class="cline-any cline-no">0</span>
+<span class="cline-any cline-no">0</span>
+<span class="cline-any cline-no">0</span>
+<span class="cline-any cline-no">0</span>
+<span class="cline-any cline-no">0</span></td><td class="text"><pre class="prettyprint lang-js">ENOENT: no such file or directory, open 'C:\Users\User PC\Desktop\vidly\routes\login.js'
+Error: ENOENT: no such file or directory, open 'C:\Users\User PC\Desktop\vidly\routes\login.js'
+    at Object.openSync (node:fs:603:3)
+    at Object.readFileSync (node:fs:471:35)
+    at MapStore.sourceFinder (C:\Users\User PC\Desktop\vidly\node_modules\istanbul-lib-source-maps\lib\map-store.js:157:23)
+    at Context.getSource (C:\Users\User PC\Desktop\vidly\node_modules\istanbul-lib-report\lib\context.js:71:21)
+    at annotateSourceCode (C:\Users\User PC\Desktop\vidly\node_modules\istanbul-reports\lib\html\annotator.js:249:40)
+    at HtmlReport.onDetail (C:\Users\User PC\Desktop\vidly\node_modules\istanbul-reports\lib\html\index.js:414:33)
+    at LcovReport.<computed> [as onDetail] (C:\Users\User PC\Desktop\vidly\node_modules\istanbul-reports\lib\lcov\index.js:28:23)
+    at Visitor.value (C:\Users\User PC\Desktop\vidly\node_modules\istanbul-lib-report\lib\tree.js:38:38)
+    at ReportNode.visit (C:\Users\User PC\Desktop\vidly\node_modules\istanbul-lib-report\lib\tree.js:88:21)
+    at C:\Users\User PC\Desktop\vidly\node_modules\istanbul-lib-report\lib\tree.js:92:19</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-12-09T05:20:30.878Z
+                at 2023-12-09T05:16:26.919Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominion Babies Store - Register</title>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Register</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content area -->
+    <main>
+        <h1>Welcome to Dominion Babies Store</h1>
+        <p>Here, you can find all the baby products you need for your little ones.</p>
+    </main>
+
+    <!-- Registration form -->
+    <div id="registration-form">
+        <h2>Register</h2>
+        <form action="/api/users" method="POST">
+            <label for="register-name">Name:</label>
+            <input type="text" id="register-name" name="name" required>
+            <label for="register-email">Email:</label>
+            <input type="email" id="register-email" name="email" required>
+            <label for="register-password">Password:</label>
+            <input type="password" id="register-password" name="password" required>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <!-- Logout button -->
+    <button onclick="logout()">Logout</button>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2021 Dominion Babies Store. All rights reserved.</p>
+    </footer>
+
+    <!-- Script for logout functionality -->
+    <script>
+        function logout() {
+            // Use fetch API to send a POST request to the logout route
+            fetch('/logout', { method: 'POST' })
+                .then(response => response.text())
+                .then(message => {
+                    alert(message); // Display the logout message
+                    location.reload(); // Reload the page after logout
+                })
+                .catch(error => console.error('Logout failed', error));
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominion Babies Store - Register</title>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Register</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content area -->
+    <main>
+        <h1>Welcome to Dominion Babies Store</h1>
+        <p>Here, you can find all the baby products you need for your little ones.</p>
+    </main>
+
+    <!-- Registration form -->
+    <div id="registration-form">
+        <h2>Register</h2>
+        <form action="/api/users" method="POST">
+            <label for="register-name">Name:</label>
+            <input type="text" id="register-name" name="name" required>
+            <label for="register-email">Email:</label>
+            <input type="email" id="register-email" name="email" required>
+            <label for="register-password">Password:</label>
+            <input type="password" id="register-password" name="password" required>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <!-- Logout button -->
+    <button onclick="logout()">Logout</button>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2021 Dominion Babies Store. All rights reserved.</p>
+    </footer>
+
+    <!-- Script for logout functionality -->
+    <script>
+        function logout() {
+            // Use fetch API to send a POST request to the logout route
+            fetch('/logout', { method: 'POST' })
+                .then(response => response.text())
+                .then(message => {
+                    alert(message); // Display the logout message
+                    location.reload(); // Reload the page after logout
+                })
+                .catch(error => console.error('Logout failed', error));
+        }
+    </script>
+</body>
+</html>

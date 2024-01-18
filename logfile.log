@@ -837,3 +837,73 @@
 {"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly..."}
 {"level":"info","message":"Listening on port 5000..."}
 {"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly_tests..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly_tests..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly_tests..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly_tests..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly_tests..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly_tests..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly..."}
+{"body":"{\r\n    \"name\": \"dennis\"\r\n    \"email\":\"programmingwithdennis01@gmail.com\",\r\n    \"password\":\"12345\"\r\n}","expose":true,"level":"error","message":"Unexpected string in JSON at position 29 Unexpected string in JSON at position 29","stack":"SyntaxError: Unexpected string in JSON at position 29\n    at JSON.parse (<anonymous>)\n    at parse (C:\\Users\\User PC\\Desktop\\vidly\\node_modules\\body-parser\\lib\\types\\json.js:89:19)\n    at C:\\Users\\User PC\\Desktop\\vidly\\node_modules\\body-parser\\lib\\read.js:128:18\n    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)\n    at invokeCallback (C:\\Users\\User PC\\Desktop\\vidly\\node_modules\\raw-body\\index.js:231:16)\n    at done (C:\\Users\\User PC\\Desktop\\vidly\\node_modules\\raw-body\\index.js:220:7)\n    at IncomingMessage.onEnd (C:\\Users\\User PC\\Desktop\\vidly\\node_modules\\raw-body\\index.js:280:7)\n    at IncomingMessage.emit (node:events:517:28)\n    at endReadableNT (node:internal/streams/readable:1368:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)","status":400,"statusCode":400,"type":"entity.parse.failed"}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly..."}
+{"body":"{\r\n    \"name\":dennis\r\n    \"email\": \"programmingwithdennis01@gmail.com\",\r\n    \"password\": \"12345\"\r\n\r\n}","expose":true,"level":"error","message":"Unexpected token d in JSON at position 14 Unexpected token d in JSON at position 14","stack":"SyntaxError: Unexpected token d in JSON at position 14\n    at JSON.parse (<anonymous>)\n    at parse (C:\\Users\\User PC\\Desktop\\vidly\\node_modules\\body-parser\\lib\\types\\json.js:89:19)\n    at C:\\Users\\User PC\\Desktop\\vidly\\node_modules\\body-parser\\lib\\read.js:128:18\n    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)\n    at invokeCallback (C:\\Users\\User PC\\Desktop\\vidly\\node_modules\\raw-body\\index.js:231:16)\n    at done (C:\\Users\\User PC\\Desktop\\vidly\\node_modules\\raw-body\\index.js:220:7)\n    at IncomingMessage.onEnd (C:\\Users\\User PC\\Desktop\\vidly\\node_modules\\raw-body\\index.js:280:7)\n    at IncomingMessage.emit (node:events:514:28)\n    at endReadableNT (node:internal/streams/readable:1359:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)","status":400,"statusCode":400,"type":"entity.parse.failed"}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly_tests..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly_tests..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly_tests..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly_tests..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly_tests..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly_tests..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly_tests..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly_tests..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly_tests..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly_tests..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly_tests..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly_tests..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly_tests..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly_tests..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Listening on port 5000..."}
+{"level":"info","message":"Connected to mongodb://127.0.0.1:27017/vidly_tests..."}

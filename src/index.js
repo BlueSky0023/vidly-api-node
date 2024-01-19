@@ -1,18 +1,18 @@
 import React from 'react';
-import { createRoot } from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import 'bootstrap/dist/css/bootstrap.css';
-import '@fortawesome/fontawesome-free/css/all.css';
+import "bootstrap/dist/css/bootstrap.css"
+import "font-awesome/css/font-awesome.css"
+import { BrowserRouter } from 'react-router-dom';
 
-const root = createRoot(document.getElementById('root'));
+console.log("SUPERMAN", process.env.REACT_APP_NAME);
 
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+<BrowserRouter>
+<App />
+</BrowserRouter>
 );
-
 reportWebVitals();

@@ -1,29 +1,12 @@
-import React, { Component } from "react";
-import '@fortawesome/fontawesome-free/css/all.css';
-
-class Like extends Component {
-  state = {
-    liked: false
-  };
-
-  handleLikeClick = () => {
-    this.setState(prevState => ({
-      liked: !prevState.liked
-    }));
-  };
-
-  render() {
-   const heartClass = this.state.liked ? "fas" : "far";
-
+function Like (props) {
+    let classes= "fa fa-heart"; //full heart
+    if (!props.liked) classes += "-o"; //empty heart
     return (
-      <i
-        className={`${heartClass} fa-heart`}
-        aria-hidden="true"
-        onClick={this.handleLikeClick}
-        style={{ cursor: "pointer" }}
-      />
+      <>
+          <i onClick={props.onClick} style={{cursor:"pointer"}} className={classes} aria-hidden="true"></i>
+  
+      </>
     );
-  }
 }
 
-export default Like;
+export default Like ;

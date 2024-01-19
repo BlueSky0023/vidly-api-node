@@ -1,105 +1,53 @@
-import React, { Component } from "react";
-import Input from "./common/input";
+import React from 'react';
+import { Redirect } from 'react-router-dom';
+import Joi from 'joi-browser';
+import Form from './common/form';
+import auth from '../services/authService';
 
-class Login extends Component {
+
+class Login extends Form {
   state = {
-    account: {
-      username: "",
-      password: "",
+    data: {
+      username: '',
+      password: '',
     },
     errors: {},
+    loading: false,
   };
 
-  validate = () => {
-    // return{username:"username is required"}
-
-    //object
-    const errors = {};
-
-    const { account } = this.state;
-
-    if (account.username.trim() === "")
-      errors.username = "username is required";
-    if (account.password.trim() === "")
-      errors.password = "password is required";
-
-    return Object.keys(errors).length === 0 ? null : errors;
+  schema = {
+    username: Joi.string().required().label('Username'),
+    password: Joi.string().required().label('Password'),
   };
 
-  // username = React.createRef()
-  handleSubmit = (e) => {
-    e.preventDefault();
+  doSubmit = async () => {
+    try {
+      const { data } = this.state;
+      await auth.login(data.username, data.password);
 
-    const errors = this.validate();
-    console.log(errors);
-    this.setState({ errors : errors || {} });
-    if (errors) return;
-
-    console.log("submit");
-
-    // const username = this.username.current.value;
-
-    // console.log("chck"+username)
-  };
-  validateProperty=({name,value})=>{
-    if(name === "username"){
-      if(value.trim() === "" ) return "username is required";
+      const { state } = this.props.location;
+      window.location = state? state.from.pathname : '/';
+     } catch (ex) {
+      if (ex.response && ex.response.status === 400) {
+        const errors = { ...this.state.errors };
+        errors.username = ex.response.data;
+        this.setState({ errors });
+      }
     }
-    if(name === "password"){
-      if(value.trim() === "" ) return "password is required";
-    }
-  
-  }
-  handleChange = ({ currentTarget: input }) => {
-
-const errors = {...this.state.errors}
-const errorMessage = this.validateProperty(input);
-if(errorMessage) errors[input.name] = errorMessage;
- else delete errors[input.name]
-
-
-
-    const account = { ...this.state.account };
-    // account[e.currentTarget.name] = e.currentTarget.value;
-    account[input.name] = input.value;
-
-    this.setState({ account ,errors });
-    console.log(account);
   };
+
   render() {
-    const { account ,errors } = this.state;
+    if (auth.getCurrentUser()) return <Redirect to="/" />;
+
     return (
-      <>
+      <div>
         <h1>Login</h1>
         <form onSubmit={this.handleSubmit}>
-          <Input
-            name="username"
-            label="Username"
-            value={account.username}
-            onChange={this.handleChange}
-            error={errors.username}
-          />
-
-          <Input
-            name="password"
-            label="Password"
-            value={account.password}
-            onChange={this.handleChange}
-            error={errors.password}
-          />
-
-          {/* <div className="form-group">
-        <label htmlFor="username">Username</label>
-        <input ref={this.username} value={username} name="username" type="text" autoFocus className="form-control" id="username" placeholder="Username" onChange={this.handleChange} />
-    </div>
-    <div className="form-group">
-        <label htmlFor="password">Password</label>
-        <input type="password" value={password} name="password"  onChange={this.handleChange} className="form-control" id="password" placeholder="Password" />
-    </div>  */}
-
-          <button className="btn btn-primary">Log in</button>
+          {this.renderInput('username', 'Username', 'Enter Email')}
+          {this.renderInput('password', 'Password', 'password', 'Enter Password')}
+          {this.renderButton('Login', this.state.loading, this.handleLogin)}
         </form>
-      </>
+      </div>
     );
   }
 }

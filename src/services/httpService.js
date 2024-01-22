@@ -2,6 +2,11 @@ import axios from 'axios';
 import logger from './logService';
 import { toast } from 'react-toastify';
 
+// Set the base URL based on the environment
+axios.defaults.baseURL =
+  process.env.NODE_ENV === 'production'
+    ? process.env.REACT_APP_API_PROD_URL
+    : process.env.REACT_APP_API_DEV_URL;
 
 axios.interceptors.response.use(
   success => {

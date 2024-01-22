@@ -22,16 +22,11 @@ class Movies extends Component {
   };
 
   async componentDidMount() {
-    try {
-      const { data } = await getGenres();
-      const genres = [{ id: "", name: " All Genres" }, ...data];
-      const { data: movies } = await getMovies();
-      this.setState({ movies, genres });
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
+    const { data } = await getGenres();
+    const { data: movies } = await getMovies();
+    const genres = [{ _id: "", name: "All Movies" }, ...data];
+    this.setState({ movies, genres });
   }
-
 
   handleDelete = async (movie) => {
     const originalMovies = this.state.movies;
@@ -156,4 +151,4 @@ class Movies extends Component {
   }
 }
 
-export default Movies
+export default Movies;
